@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" type="text/css" href="main_Best.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script type="text/javascript" src="./main_Best.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="dibs">
+            <p class="p-text">찜한 상품</p>
+            <div class="dibs-wrap">
+                <div class="dibs-image"><img src="./img/steamed.png" alt=""></div>
+                <div class="dibs-text">
+                    <p>0</p>
+                </div>
+            </div>
+        </div>
+        <div class="recently">
+            <p class="p-text">최근 본 상품</p>
+            <div class="br_tags"></div>
+            <div>
+                <img src="./img/tent_icon.png">
+                <img src="./img/tent_icon.png">
+            </div>
+            <div>&lt; 1 / 5 &gt;</div>
+        </div>
+    </aside>
+    <div class="allpage">
+        <div class="header">
+            <section class="header_top">
+                <div class="header_top_icon">
+                    <img class="borrow_logo" src="./img/borrow_logo.png">
+                    <input class="input_search" type="text" name="search">
+                </div>
+                <div class="header_top_menu">
+                    <p class="mypage">마이페이지</p>
+                    <div class="br"></div>
+                    <p class="username"><strong>김지영</strong> 님</p>
+                    <div class="br"></div>
+                    <button class="logoutBtn active">
+                        <p>로그아웃</p>
+                    </button>
+                </div>
+            </section>
+
+            <section class="header_bottom">
+                <nav class="header_bottom_nav">
+                    <ul class="bottom_items">
+                        <li class="nav_home"><a href="#">홈</a></li>
+                        <li class="nav_category"><a href="#">카테고리 선택</a></li>
+                        <li class="nav_best"><a href="#">베스트</a></li>
+                        <li class="nav_gido"><a href="#">주변 지도로 찾기</a></li>
+                        <li class="nav_land"><a href="#">빌려주기</a></li>
+                        <li class="nav_newitem"><a href="#">신상품</a></li>
+                        <li class="nav_realmenu_box">
+                            <span class="nav_realmenu_left">
+                                <p class="nav_realmenu_t1">1.</p>
+                                <p class="nav_realmenu_t2">캐리어</p>
+                                <img class="ploygon" src="./img/Polygon 2.png">
+                            </span>
+                            <span class="nav_realmenu_right">
+                                <img class="bottomVector" src="./img/bottomVector.png" onclick="viewvisible()">
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="nav_realtimesearch">
+                        <div class="realtime_text">실시간 검색어</div>
+                        <div class="realtime">
+                            <section class="realtimeLeft">
+                                <div class="ranking_text">1~10위</div>
+                                <div class="real_br_tags"></div>
+                                <dl>
+                                    <div class="real_time_ranking">
+                                        <dt>1위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>2위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>3위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>4위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>5위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>6위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>7위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>8위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>9위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>10위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                </dl>
+                            </section>
+                            <section class="realtimeRight">
+                                <div class="ranking_text">10~20위</div>
+                                <div class="real_br_tags"></div>
+                                <dl>
+                                    <div class="real_time_ranking">
+                                        <dt>11위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>12위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>13위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>14위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>15위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>16위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>17위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>18위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>19위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                    <div class="real_time_ranking">
+                                        <dt>20위</dt>
+                                        <dt>캐리어</dt><img src="/img/Polygon 2.png">
+                                    </div>
+                                </dl>
+                            </section>
+                        </div>
+                    </div>
+                </nav>
+            </section>
+        </div>
+        <section class="mid">
+            <div class="outer">
+                <div class="inner-list">
+                    <div class="inner">
+                        <img class="slideimg" src="./슬라이드배너/slidebanner2.PNG">
+                    </div>
+                    <div class="inner">
+                        <img class="slideimg" src="./슬라이드배너/slidebanner3.PNG">
+                    </div>
+                    <div class="inner">
+                        <img class="slideimg" src="./슬라이드배너/slidebanner4.PNG">
+                    </div>
+                </div>
+                <div class="button_list">
+                    <div class="button-left">&lt;</div>
+                    <div class="button-right">&gt;</div>
+                </div>
+            </div>
+        </section>
+        <div class="slideIndexBox">
+            <span class="slideBrTags"></span>
+            <div class="slideindex">
+                <span class="index_value">&lt;</span>
+                <span class="index_now">1</span>
+                <span class="index_value">/</span>
+                <span class="index_all">4</span>
+                <span class="index_value">&gt;</span>
+            </div>
+        </div>
+        </br>
+        <section class="bottom">
+            //베스트 상품
+        </section>
+
+
+    </div>
+</body>
+
+</html>
