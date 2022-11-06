@@ -19,6 +19,9 @@ body {
 }
 
 .allpage {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
   width: 1400px;
   border: 50px 46.73px 44.82px 46.73px;
   height: 100%;
@@ -423,98 +426,6 @@ a:hover {
   padding: 6px 0px 10px 0px;
 }
 
-//slide banner------------------------------------------------------------------
-
-.mid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.outer {
-  width: 1200px;
-  height: 331px;
-  margin: 0px 0px 0px 0px;
-  overflow-x: hidden;
-  box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.inner-list {
-  display: flex;
-  align-items: center;
-  transition: .3s ease-out;
-  height: 100%;
-}
-
-.inner {
-  overflow: hidden;
-}
-
-.img {
-  overflow: hidden;
-}
-
-.button_list {
-  width: 100%;
-  height: 10px;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  transform: translate(-49%, -210px);
-  z-index: 2;
-  cursor: pointer;
-}
-
-.button-right {
-  display: block;
-  transform: translate(1150px, 0);
-  position: fixed;
-  font-size: 50px;
-  color: gray;
-}
-
-.button-left {
-  display: block;
-  transform: translate(20px, 0);
-  position: fixed;
-  font-size: 50px;
-  color: gray;
-}
-
-.slideIndexBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  margin: 50px 0px 0px 0px;
-}
-
-.slideBrTags {
-  width: 50%;
-  padding-left: 250px;
-  height: 1px;
-  background-color: black;
-}
-
-.slideindex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-left: 60px;
-}
-
-.slideindex>* {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 24px;
-  color: #1C6758;
-}
 
 //best item--------------------------------------------------------------------------
 .bottom {
@@ -667,29 +578,60 @@ a:hover {
 // }
 
 .pagination {
+
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .pagination li {
   margin: 0 1px;
 }
 
-.pagination a {
-  display: block;
-  padding: .5em 1em;
-  border: 1px solid #999;
-  border-radius: .2em;
-  text-decoration: none;
-}
+// .pagination a {
+//   display: block;
+//   padding: .5em 1em;
+//   border: 1px solid #999;
+//   border-radius: .2em;
+//   text-decoration: none;
+// }
 
 .pagination a[aria-current="page"] {
   background-color: #333;
   color: #fff;
 }
+#numbers{
+  display:flex;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
 
+color: #000000;
+}
+
+#numbers > li > a{
+  width:30px;
+  height: 30px;
+  background: #3D8361;
+  border-radius: 100px;
+  border: 1px solid #999;
+  text-decoration: none;
+  margin-right:21px;
+}
+.pagination > span {
+  display:flex;
+  width:50px;
+  height: 50px;
+  font-size:40px;
+  text-align: center;
+  align-items: center;
+}
 /* .button-list {
   text-align: center;
   position: absolute;

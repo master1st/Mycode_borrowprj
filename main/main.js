@@ -3,7 +3,7 @@ const nav_realtimesearch = document.querySelector(".nav_realtimesearch");
 const input_search = document.querySelector(".input_search");
 const recentSearchContainer = document.querySelector(".recentSearchContainer");
 let view = "visible"
-function viewvisible(e) {
+function realtimeViewVisible(e) {
   console.log(e);
     if (view === "visible") {
         nav_realtimesearch.style="visibility:visible"
