@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet/less" type="text/css" href="main.less" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
     <script type="text/javascript" src="./main.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
@@ -114,21 +114,84 @@
             <section class="header_bottom">
                 <nav class="header_bottom_nav">
                     <ul class="bottom_items">
-                        <li class="nav_home"><a href="#">홈</a></li>
-                        <li class="nav_category" onclick="categorybox()"><a href="#">카테고리 선택</a></li>
-                        <li class="nav_best"><a href="../best/best.html">베스트</a></li>
-                        <li class="nav_gido"><a href="#">주변 지도로 찾기</a></li>
+                        <li class="nav_home"><a href="http://127.0.0.1:5500/main/main.html">홈</a></li>
+                        <li class="nav_category" onclick="categoryBox()"><a
+                                href="http://127.0.0.1:5500/category/category.html">카테고리 선택</a></li>
+                        <li class="nav_best"><a href="http://127.0.0.1:5500/best/best.html">베스트</a></li>
+                        <li class="nav_gido"><a href="http://127.0.0.1:5500/map/map.html">주변 지도로 찾기</a></li>
                         <li class="nav_land"><a href="#">빌려주기</a></li>
                         <li class="nav_newitem"><a href="#">신상품</a></li>
+                        <!-- <li class="outer">
+                            <div class="inner-list">
+                                <div class="inner">
+                                    <img src="./slidebanner2.PNG">
+                                </div>
+                                <div class="inner">
+                                    <img src="./slidebanner3.PNG">
+                                </div>
+                                <div class="inner">
+                                    <img src="./slidebanner4.png">
+                                </div>
+                            </div>
+                        </li> -->
                         <li class="nav_realmenu_box">
-                            <span class="nav_realmenu_left">
-                                <p class="nav_realmenu_t1">1.</p>
-                                <p class="nav_realmenu_t2" class="rankingWord ">캐리어</p>
-                                <img class="ploygon" src="../img/Polygon 2.png">
-                            </span>
-                            <span class="nav_realmenu_right">
-                                <img class="bottomVector" src="../img/bottomVector.png" onclick="realtimeViewVisible()">
-                            </span>
+                            <div class="nav_realmenu_left">
+                                <div class="nav_inner">
+                                    <div class="inner_item">
+                                        <p class="nav_realmenu_t1">1.</p>
+                                        <p class="nav_realmenu_t2">프언</p>
+                                        <img class="ploygon" src="../img/Polygon 2.png">
+                                    </div>
+                                    <span class="nav_realmenu_right">
+                                        <img class="bottomVector" src="../img/bottomVector.png"
+                                            onclick="realtimeViewVisible()">
+                                    </span>
+                                </div>
+                                <div class="nav_inner">
+                                    <div class="inner_item">
+                                        <p class="nav_realmenu_t1">2.</p>
+                                        <p class="nav_realmenu_t2">시소</p>
+                                        <img class="ploygon" src="../img/Polygon 2.png">
+                                    </div>
+                                    <span class="nav_realmenu_right">
+                                        <img class="bottomVector" src="../img/bottomVector.png"
+                                            onclick="realtimeViewVisible()">
+                                    </span>
+                                </div>
+                                <div class="nav_inner">
+                                    <div class="inner_item">
+                                        <p class="nav_realmenu_t1">3.</p>
+                                        <p class="nav_realmenu_t2">데베</p>
+                                        <img class="ploygon" src="../img/Polygon 2.png">
+                                    </div>
+                                    <span class="nav_realmenu_right">
+                                        <img class="bottomVector" src="../img/bottomVector.png"
+                                            onclick="realtimeViewVisible()">
+                                    </span>
+                                </div>
+                                <div class="nav_inner">
+                                    <div class="inner_item">
+                                        <p class="nav_realmenu_t1">4.</p>
+                                        <p class="nav_realmenu_t2">결사</p>
+                                        <img class="ploygon" src="../img/Polygon 2.png">
+                                    </div>
+                                    <span class="nav_realmenu_right">
+                                        <img class="bottomVector" src="../img/bottomVector.png"
+                                            onclick="realtimeViewVisible()">
+                                    </span>
+                                </div>
+                                <div class="nav_inner">
+                                    <div class="inner_item">
+                                        <p class="nav_realmenu_t1">5.</p>
+                                        <p class="nav_realmenu_t2">기억안남</p>
+                                        <img class="ploygon" src="../img/Polygon 2.png">
+                                    </div>
+                                    <span class="nav_realmenu_right">
+                                        <img class="bottomVector" src="../img/bottomVector.png"
+                                            onclick="realtimeViewVisible()">
+                                    </span>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                     <div class="nav_realtimesearch">
@@ -146,65 +209,65 @@
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>2</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">여행용 텐트</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>3</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">에어프라이어</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>4</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">여행가방</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>5</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">낚시대</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>6</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">야구모자</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>7</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">전등</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>8</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">보조배터리</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>9</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">스케쳐스</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>10</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">미니오븐</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
@@ -215,72 +278,72 @@
                                 <div class="real_br_tags"></div>
                                 <dl>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>11</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">후드티</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>12</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">나이키</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>13</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">농구화</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>14</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">가을점퍼</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>15</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">안전헬멧</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>16</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">손전등</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>17</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">의자</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>18</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">가습기</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>19</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">샌들</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>
                                     <div class="real_time_ranking">
-                                        <dt class="ranking_left"><strong>1</strong></dt>
+                                        <dt class="ranking_left"><strong>20</strong></dt>
                                         <span class="ranking_right">
-                                            <dt class="rankingWord ">캐리어</dt>
+                                            <dt class="rankingWord ">청바지</dt>
                                             <img src="/img/Polygon 2.png">
                                         </span>
                                     </div>

@@ -7,11 +7,11 @@ let view = "visible"
 function realtimeViewVisible(e) {
   console.log(e);
     if (view === "visible") {
-        nav_realtimesearch.style="visibility:visible"
+        nav_realtimesearch.style="visibility:visible";
         view = "hidden";
     }
     else{
-        nav_realtimesearch.style = "visibility:hidden"
+        nav_realtimesearch.style = "visibility:hidden";
         view = "visible";
     }   
 }
@@ -19,21 +19,21 @@ function realtimeViewVisible(e) {
 function searchViewVisible(e) {
   console.log(e);
     if (view === "visible") {
-      recentSearchContainer.style="visibility:visible"
+      recentSearchContainer.style="visibility:visible";
         view = "hidden";
     }
     else{
-      recentSearchContainer.style = "visibility:hidden"
+      recentSearchContainer.style="visibility:hidden";
         view = "visible";
     }   
 }
 function categorybox(e){
   if (view === "visible") {
-    categoryClick.style="visibility:visible"
+    categoryClick.style="visibility:visible";
       view = "hidden";
   }
   else{
-    categoryClick.style = "visibility:hidden"
+    categoryClick.style = "visibility:hidden";
       view = "visible";
   }  
 }
@@ -60,7 +60,6 @@ function circleMove(item) {
     else{
       circle.style="animation-name:circleright"
         view = "visible";
-
     }   
 }
 
@@ -116,6 +115,37 @@ const getInterval = () => {
 }
 
 let interval = getInterval(); // interval 등록
+
+
+
+// ============================================================================
+const outers = document.querySelector('.nav_realmenu_box');
+const innerLists = document.querySelector('.nav_realmenu_left');
+const innerss = document.querySelectorAll('.nav_inner');
+// const imgs = document.querySelectorAll('img');
+let currentIndexs = 0; // 현재 슬라이드 화면 인덱스
+
+innerss.forEach((inner) => {
+    inner.style.width = `${innerLists.clientWidth}px`; // inner의 width를 모두 outer의 width로 만들기
+    inner.style.height = `${innerLists.clientHeight}px`;
+})
+innerLists.style.height = `${outers.clientHeight * innerss.length}px`;
+
+
+const getIntervals = () => {
+    return setInterval(() => {
+        currentIndexs++;
+        currentIndexs = currentIndexs >= innerss.length ? 0 : currentIndexs;
+        innerLists.style.marginTop = `-${outers.clientHeight * currentIndexs}px`;
+    }, 4000);
+}
+
+let intervalz = getIntervals(); // interval 등록
+
+// ============================================================================
+
+
+
 
 //페이지네이션 ----------------------------------------------------------------------
 const rowsPerPage = 8;

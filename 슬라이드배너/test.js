@@ -10,8 +10,12 @@ const imgs = document.querySelectorAll('img');
 index_all.innerHTML = `${inners.length}`;
 let currentIndex = 0; // 현재 슬라이드 화면 인덱스
 
+
+// 동적 생성, css 다 주고 시작 
+
 inners.forEach((inner) => {
   inner.style.width = `${outer.clientWidth}px`; // inner의 width를 모두 outer의 width로 만들기
+
 })
 
 imgs.forEach((img) => {

@@ -11,10 +11,13 @@ sans-serif;
   font-style: normal;
 }
 
+html {
+  height: 100%;
+}
 body {
   margin: 0px;
   width: 100%;
-  height: 99vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   background-color: #EEEBEA;
@@ -23,7 +26,7 @@ body {
 .allpage {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   width: 1400px;
   border: 50px 46.73px 44.82px 46.73px;
   height: 100%;
@@ -170,13 +173,14 @@ a {
   font-size: 20px;
   line-height: 24px;
   text-decoration: none;
+  color:black;
 }
 
 a:link {
   color: black;
   text-decoration: none;
 }
-.nav_best >a:visited {
+.nav_gido >a:visited {
   color:red;
 }
 
@@ -443,18 +447,32 @@ a:hover {
 
 
 /* //best item-------------------------------------------------------------------------- */
+.bottomDiv {
+    display:flex;
+    width:100%;
+    flex:1;
+
+    justify-content: center;
+}
+
 .bottom {
   display: flex;
   flex-direction: column;
   margin-top: 54px;
-  padding: 0px 150px 0px 150px;
   height: 100%;
+  flex-basis:40%;
+  margin-right: 30px;
 }
-
+.mapApi {
+    display:flex;
+    flex-basis:40%;
+    border:1px solid black;
+    margin: 70px 0px 0px 30px;
+}
 .bestitem_text {
   display: flex;
   flex-direction: column;
-  margin-bottom: 36px;
+  margin-top: 36px;
 
 }
 
@@ -523,18 +541,23 @@ a:hover {
 
 .bestitems {
   display: flex;
-  height: 100%;
+  height: 70%;
+  flex-wrap: wrap;
+  border:1px solid black;
+  justify-content: center;
+  align-items: center;
 }
 
 .bestitem {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 443px;
+  align-items: space-between;
+  width: 230px;
   height: 299px;
   border-radius: 17px;
   border: 0.849398px solid #959190;
-  margin-right: 39px;
+  margin: 0px 10px 0px 10px;
+  /* margin-right: 39px; */
 }
 
 .TransMethodImg {
@@ -567,7 +590,7 @@ a:hover {
   margin-right: 5px;
 }
 
-.heartImg {
+.mapImg {
   width: 41px;
   height: 41px;
 }
@@ -594,13 +617,13 @@ a:hover {
 // } */
 
 .pagination {
-
+  margin-left:50px;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   text-align: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .pagination li {

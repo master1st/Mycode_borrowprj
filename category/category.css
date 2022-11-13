@@ -194,7 +194,10 @@ a:hover {
     margin-left: 85px;
 }
 
-
+.nav_category >a:visited {
+    color:red;
+  }
+  
 .active {
     visibility: visible;
 }
