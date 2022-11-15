@@ -3,30 +3,40 @@ const nav_realtimesearch = document.querySelector(".nav_realtimesearch");
 const input_search = document.querySelector(".input_search");
 const recentSearchContainer = document.querySelector(".recentSearchContainer");
 const categoryClick = document.querySelector(".categoryClick");
-let view = "visible"
+let view = "visible";
+let viewstatus = 'show';
+let inout = 'in';
 function realtimeViewVisible(e) {
   console.log(e);
     if (view === "visible") {
         nav_realtimesearch.style="visibility:visible";
         view = "hidden";
     }
-    else{
+    else {
         nav_realtimesearch.style = "visibility:hidden";
         view = "visible";
-    }   
-}
-
-function searchViewVisible(e) {
-  console.log(e);
-    if (view === "visible") {
-      recentSearchContainer.style="visibility:visible";
-        view = "hidden";
     }
-    else{
-      recentSearchContainer.style="visibility:hidden";
-        view = "visible";
-    }   
 }
+//외부영역 클릭시 최근검색창 닫기===========================================================
+input_search.addEventListener('click', (e) => {
+  // console.log(e.target.parentNode);
+    if(viewstatus === 'show'){
+      recentSearchContainer.style = "visibility:visible";
+      viewstatus = "hide";
+    }
+})
+document.addEventListener('mouseup', (e) => {
+  // let e.target.closest('.recentSearchContainer').className
+  let tgE1 = e.target;
+  let recent = tgE1.closest('.recentSearchContainer');
+    if(!recent){
+      recentSearchContainer.style = "visibility:hidden";
+       viewstatus = "show";
+      
+    }
+    
+})
+//현재 클릭한 요소의 타겟의 조상 .closest('.recentSearchContainer')이 없다면 null return ========================
 function categorybox(e){
   if (view === "visible") {
     categoryClick.style="visibility:visible";

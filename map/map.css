@@ -46,7 +46,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
+
 }
 
 .header_top_icon {
@@ -54,13 +54,17 @@ body {
   align-items: center;
 
 }
-
+.header_top_icon > a{
+  width:30%;
+  height: 100%;
+}
 .borrow_logo {
+  cursor:pointer;
   margin-right: 28px;
 }
 
 .input_search {
-  width: 500px;
+  width: 600px;
   height: 56px;
   margin-left: 28px;
   background-image: url('../img/search_logo.png');
@@ -79,10 +83,17 @@ body {
 
 .mypage {
   margin-right: 11px;
+  font-size:20px;
 }
 
 .username {
   margin-right: 11px;
+  font-size:20px;
+}
+
+.loginOutText{
+  margin:0px;
+  font-size:20px;
 }
 
 .br {
@@ -192,8 +203,6 @@ a:link {
 a:hover {
   color: black;
   text-decoration: none;
-  background-color: red;
-  color: white;
 }
 
 .nav_home {
@@ -308,7 +317,7 @@ a:hover {
 .recentSearchContainer {
   position: absolute;
   left: calc(20%-500px);
-  transform: translate(-35%, 0);
+  transform: translate(-25%, 0);
   top: 115px;
   width: 500px;
   height: 196px;
