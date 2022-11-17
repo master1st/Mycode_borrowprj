@@ -152,7 +152,8 @@ ul {
   overflow: hidden;
 }
 .bottomVector{
-  margin-left:60px;
+  margin-left:50px;
+  margin-right: 10px;
 }
 .inner_item{
   display:flex;
@@ -162,6 +163,7 @@ ul {
 .nav_realmenu_right {
   display: flex;
   align-items: center;
+  width:80px;
 }
 .nav_realmenu_t1{
   margin:0px 0px 0px 10px;
