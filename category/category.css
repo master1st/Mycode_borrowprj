@@ -63,15 +63,18 @@ body {
     width: 600px;
     height: 56px;
     margin-left: 28px;
-    background-image: url('../img/search_logo.png');
+    /* background-image: url('../img/search_logo.png');
     background-repeat: no-repeat;
     background-size: 40px;
-    background-position: 95%;
+    background-position: 95%; */
     border: 2px solid #3D8361;
     border-radius: 20px;
-
-}
-
+  }
+  .search_logo {
+    width: 40px;
+    height: 40px;
+    transform: translate(-150%,0);
+  }
 .header_top_menu {
     display: flex;
     align-items: center;
