@@ -12,12 +12,12 @@ sans-serif;
 }
 
 html {
-  height: 100%;
+
 }
 body {
   margin: 0px;
   width: 100%;
-  height: 100%;
+
   display: flex;
   justify-content: center;
   background-color: #EEEBEA;
@@ -30,7 +30,7 @@ body {
   width: 1400px;
   border: 50px 46.73px 44.82px 46.73px;
   height: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   z-index: 100;
   background-color: white;
 }
@@ -568,12 +568,12 @@ a:hover {
   font-weight: 500;
   color: black;
 }
-
+/* z */
 .bestitems {
   display: flex;
   height: 70%;
   flex-wrap: wrap;
-  border:1px solid black;
+  /* border:1px solid black; */
   justify-content: center;
   align-items: center;
 }
@@ -586,7 +586,7 @@ a:hover {
   height: 299px;
   border-radius: 17px;
   border: 0.849398px solid #959190;
-  margin: 0px 10px 0px 10px;
+  margin: 10px 10px 10px 10px;
   /* margin-right: 39px; */
 }
 
@@ -599,7 +599,7 @@ a:hover {
 }
 
 .bestitemImg {
-  width: 221px;
+  /* width: 221px; */
   height: 186px;
 }
 
