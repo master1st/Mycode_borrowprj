@@ -15,40 +15,52 @@
     <section class="categoryClick">
         <dl class="categoryBox">
             <dt>
-                의류
+                <a href="#">의류
+                </a>
             </dt>
             <dt>
-                신발
+                <a href="#">신발
+                </a>
             </dt>
             <dt>
-                여행용품
+                <a href="#">여행용품
+                </a>
             </dt>
             <dt>
-                가방
+                <a href="#">가방
+                </a>
             </dt>
             <dt>
-                캐리어
+                <a href="#">캐리어
+                </a>
             </dt>
             <dt>
-                스포츠
+                <a href="#">스포츠
+                </a>
             </dt>
             <dt>
-                레저
+                <a href="#">레저
+                </a>
             </dt>
             <dt>
-                가전
+                <a href="#">가전
+                </a>
             </dt>
             <dt>
-                가구
+                <a href="#">가구
+                </a>
             </dt>
             <dt>
-                전자제품
+                <a href="#">전자제품
+                </a>
             </dt>
             <dt>
-                캐주얼
+                <a href="#">캐주얼
+                </a>
             </dt>
             <dt>
-                기타
+                <a href="#">기타
+                </a>
             </dt>
         </dl>
     </section>
@@ -64,8 +76,9 @@
             <ul class="autoSave">
                 <li>자동저장</li>
                 <li class="recenticon">
-                    <img class="backgroundCircle" src="../img/searchimg/backgroundCircle.png">
-                    <img class="circle" src="../img/searchimg/circle.png" onclick="circleMove(class{})">
+                    <img class="backgroundCircle" src="../img/searchimg/backgroundCircle.png"
+                        onclick="circleMove(class{})">
+                    <img class="circle" src="../img/searchimg/circle.png">
                 </li>
             </ul>
         </div>
@@ -95,16 +108,16 @@
             <section class="header_top">
                 <div class="header_top_icon">
                     <a href="./main.html"><img class="borrow_logo" src="../img/borrow_logo.png"></a>
-                    <form class="input_transfer"action="/search/result/검색한값/카테고리/정렬기준/" method="GET">
-                    <input class="input_search" type="text" name="search">
-                    <button class="searchBtn" type="submit" name="click" value="">
-                        <img src="../img/search_logo.png">
-                    </button>
+                    <form class="input_transfer" action="/search/result/검색한값/카테고리/정렬기준/" method="GET">
+                        <input class="input_search" type="text" name="search">
+                        <button class="searchBtn" type="submit" name="click" value="">
+                            <img src="../img/search_logo.png">
+                        </button>
                     </form>
                 </div>
-                
+
                 <!-- <div class="header_top_menu">
-                    <p class="mypage">마이페이지</p>
+                    <a href="#"><p class="mypage">마이페이지</p></a>
                     <div class="br"></div>
                     <p class="username"><strong>김지영</strong> 님</p>
                     <div class="br"></div>
@@ -113,7 +126,7 @@
                     </button>
                 </div> -->
 
-                 <div class="header_top_menu">
+                <div class="header_top_menu">
                     <button class="loginBtn active">
                         <p class="loginOutText">로그인</p>
                     </button>
@@ -127,8 +140,9 @@
                 <nav class="header_bottom_nav">
                     <ul class="bottom_items">
                         <li class="nav_home"><a href="http://127.0.0.1:5500/main/main.html">홈</a></li>
-                        <li class="nav_category" onclick="categoryBox()"><a
-                                href="http://127.0.0.1:5500/category/category.html">카테고리 선택</a></li>
+                        <li class="nav_category" onclick="categoryBox()">
+                            <a>카테고리 선택</a>
+                        </li>
                         <li class="nav_best"><a href="http://127.0.0.1:5500/best/best.html">베스트</a></li>
                         <li class="nav_gido"><a href="http://127.0.0.1:5500/map/map.html">주변 지도로 찾기</a></li>
                         <li class="nav_land"><a href="#">빌려주기</a></li>
@@ -366,7 +380,7 @@
                 </nav>
             </section>
         </div>
-    </section>
+        </section>
     </div>
 </body>
 

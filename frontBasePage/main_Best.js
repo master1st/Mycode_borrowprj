@@ -16,7 +16,20 @@ function realtimeViewVisible(e) {
         nav_realtimesearch.style = "visibility:hidden";
         view = "visible";
     }
+    
 }
+document.addEventListener('mouseup', (e) => {
+  // let e.target.closest('.recentSearchContainer').className
+  let tgE1 = e.target;
+  let recent = tgE1.closest('.nav_realtimesearch');
+
+    if(!recent){
+      nav_realtimesearch.style = "visibility:hidden";
+       viewstatus = "show";
+      
+    }
+    
+})
 //외부영역 클릭시 최근검색창 닫기===========================================================
 input_search.addEventListener('click', (e) => {
   // console.log(e.target.parentNode);
@@ -37,17 +50,27 @@ document.addEventListener('mouseup', (e) => {
     
 })
 //현재 클릭한 요소의 타겟의 조상 .closest('.recentSearchContainer')이 없다면 null return ========================
-function categorybox(e){
-  if (view === "visible") {
+function categoryBox(e){
+  if (viewstatus === "show") {
     categoryClick.style="visibility:visible";
-      view = "hidden";
+    viewstatus = "hide";
   }
   else{
     categoryClick.style = "visibility:hidden";
-      view = "visible";
+    viewstatus = "show";
   }  
 }
-
+document.addEventListener('mouseup', (e) => {
+  // let e.target.closest('.recentSearchContainer').className
+  let tgE1 = e.target;
+  let recent = tgE1.closest('.categoryClick');
+    if(!recent){
+      categoryClick.style = "visibility:hidden";
+       viewstatus = "show";
+      
+    }
+    
+})
 /*
   div사이즈 동적으로 구하기
 */

@@ -531,6 +531,7 @@ a:hover {
 }
 .categorySort{
     display:flex;
+    /* margin:0px 0px 50px 0px; */
 }
 .categoryBrTags{
     width:90%;

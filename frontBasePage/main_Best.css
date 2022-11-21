@@ -735,7 +735,7 @@ a:hover {
   visibility: hidden;
   z-index: 110;
   /* // top:calc(50%-10px); */
-  left: calc(50%-10px);
+  left: calc(50% - 60px);
   transform: translate(-260%, 42%);
 
   /* Gray/Light */
