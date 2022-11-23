@@ -164,6 +164,12 @@ ul {
   text-align: center;
 }
 
+.currentPage{
+  cursor: pointer;
+}
+.allPage{
+  cursor:pointer;
+}
 /* 실시간검색어 자동올라가기 ==================================== */
 .nav_realmenu_box {
   width: 227px;
@@ -291,6 +297,12 @@ a:hover {
   text-align: center;
 }
 
+.today_realtime{
+  display: flex;
+  text-align: center;
+  justify-content: flex-end;
+  margin:0px 50px 0px 0px;
+}
 .realtime_text {
   display: flex;
   height: 26px;

@@ -127,7 +127,12 @@ displayRow(0);
 
 nextPageBtn.addEventListener('click', ()=>{
   let nextPageNum = pageActiveIdx;
-  ++pageActiveIdx;
+  if(pageActiveIdx >= pageCount){
+    pageActiveIdx = pageActiveIdx;
+  }
+  else{
+    ++pageActiveIdx;
+  }
   nextPageNum = pageActiveIdx >= pageCount ? pageCount : pageActiveIdx;
   displayRow(nextPageNum-1);
   currentPage.innerHTML=`${nextPageNum}`;

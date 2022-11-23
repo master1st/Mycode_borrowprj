@@ -342,20 +342,22 @@
         <section class="bottom">
             <section class="categoryMainField">
                 <div class="categoryBox">
-                <ul class="categoryInfo">
-                    <li class="categoryName">여행용품</li>
-                    <li>총 123개</li>
-                </ul>
-                <div class="categoryBrTags"></div>
-                <ul class="categorySort">
-                    <li class="latestOrder">최신순</li>
-                    <li class="highPriceOrder">높은가격순</li>
-                    <li class="lowPriceOrder">낮은가격순</li>
-                    <li class="viewOrder">조회순</li>
-                    <li class="recommendOrder">추천순</li>
-                    <li class="applicationOrder">신청순</li>
-                </ul>   
-            </div>
+                    <ul class="categoryInfo">
+                        <li class="categoryName">여행용품</li>
+                        <li>총 123개</li>
+                    </ul>
+                    <div class="categoryBrTags"></div>
+                    <ul class="categorySort">
+
+                        <li class="latestOrder"><a href="#">최신순</a></li>
+                        <li class="highPriceOrder"><a href="#">높은가격순</a></li>
+                        <li class="lowPriceOrder"><a href="#">낮은가격순</a></li>
+                        <li class="viewOrder"><a href="#">조회순</a></li>
+                        <li class="recommendOrder"><a href="#">추천순</a></li>
+                        <li class="applicationOrder"><a href="#">신청순</a></li>
+                        </a>
+                    </ul>
+                </div>
             </section>
             <!--전체 width가   -->
             <section class="bestitems">
@@ -570,7 +572,7 @@
                 </div>
 
             </section>
-            
+
         </section>
         <section class="pagination">
             <span class="dLeftVector">&laquo;</span>
@@ -592,6 +594,7 @@
             </ul>
         </nav> -->
     </div>
+    <script>var total_page_num = {{total_page_num}}</script>
 </body>
 
 </html>
