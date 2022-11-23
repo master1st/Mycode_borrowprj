@@ -96,8 +96,80 @@ function circleMove(item) {
     }   
 }
 
+const rowsPerPage = 2;
+const rows = document.querySelectorAll('.recentItem');
+const rowsCount = rows.length; //100/8  12.9 -> 13
+const pageCount = Math.ceil(rowsCount/rowsPerPage);
 
+const prevPageBtn = document.querySelector('.prevPageBtn');
+const nextPageBtn = document.querySelector('.nextPageBtn');
+let pageActiveIdx = 0; //현재 보고 있는 페이지 그룹 번호
+let currentPageNum = 1; //현재 보고 있는 페이지 번호
+let maxPageNum = 9; //페이지그룹 최대 개수
+function displayRow(idx){
+  console.log(idx);
+  let start = idx*rowsPerPage;
+  let end = start+rowsPerPage;
 
+  let rowsArray = [...rows];
+
+  for(ra of rowsArray){
+    ra.style.display = 'none';
+  }
+
+  let newRows = rowsArray.slice(start,end);
+  for(nr of newRows){
+    nr.style.display = '';
+  }
+
+}
+displayRow(0);
+
+nextPageBtn.addEventListener('click', ()=>{
+  let nextPageNum = pageActiveIdx;
+  ++pageActiveIdx;
+  nextPageNum = pageActiveIdx >= pageCount ? pageCount : pageActiveIdx;
+  displayRow(nextPageNum-1);
+  currentPage.innerHTML=`${nextPageNum}`;
+  allPage.innerHTML=`${pageCount}`;
+  // if(pageActiveIdx == 0) {
+  //   prevPageBtn.style.display = 'none'
+  // } else {
+  //   prevPageBtn.style.display = 'flex'
+  // }
+  // if(pageActiveIdx == totalPageCount -1) {
+  //   nextPageBtn.style.display = 'none'
+  // } else {
+  //   nextPageBtn.style.display = 'flex'
+  // }
+});
+prevPageBtn.addEventListener('click', ()=>{
+  let nextPageNum = pageActiveIdx;
+  --pageActiveIdx;
+  nextPageNum = pageActiveIdx < 1 ? 1 : pageActiveIdx;
+  displayRow(nextPageNum);
+  currentPage.innerHTML=`${nextPageNum}`;
+  allPage.innerHTML=`${pageCount}`;
+  // if(pageActiveIdx == 0) {
+  //   prevPageBtn.style.display = 'none'
+  // } else {
+  //   prevPageBtn.style.display = 'flex'
+  // }
+  // if(pageActiveIdx == totalPageCount -1) {
+  //   nextPageBtn.style.display = 'none'
+  // } else {
+  //   nextPageBtn.style.display = 'flex'
+  // }
+
+});
+const currentPage = document.querySelector('.currentPage');
+const allPage = document.querySelector('.allPage');
+currentPage.innerHTML=`${pageActiveIdx+1}`;
+allPage.innerHTML=`${pageCount}`;
+function pagenum(nextPageNum){
+  console.log(nextPageNum);
+
+}
 // inners.forEach((inner) => {
 //   inner.style.width = `${outer.clientWidth}px`; // inner의 width를 모두 outer의 width로 만들기
 // })
