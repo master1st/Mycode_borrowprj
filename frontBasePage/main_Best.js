@@ -96,22 +96,22 @@ function circleMove(item) {
     }   
 }
 
-const rowsPerPage = 2;
-const rows = document.querySelectorAll('.recentItem');
-const rowsCount = rows.length; //100/8  12.9 -> 13
-const pageCount = Math.ceil(rowsCount/rowsPerPage);
+const rowsPerPages = 2;
+const rowss = document.querySelectorAll('.recentItem');
+const rowsCounts = rowss.length; //100/8  12.9 -> 13
+const pageCounts = Math.ceil(rowsCounts/rowsPerPages);
 
-const prevPageBtn = document.querySelector('.prevPageBtn');
-const nextPageBtn = document.querySelector('.nextPageBtn');
-let pageActiveIdx = 0; //현재 보고 있는 페이지 그룹 번호
-let currentPageNum = 1; //현재 보고 있는 페이지 번호
-let maxPageNum = 9; //페이지그룹 최대 개수
-function displayRow(idx){
+const prevPageBtns = document.querySelector('.prevPageBtn');
+const nextPageBtns = document.querySelector('.nextPageBtn');
+let pageActiveIdxs = 0; //현재 보고 있는 페이지 그룹 번호
+let currentPageNums = 1; //현재 보고 있는 페이지 번호
+let maxPageNums = 9; //페이지그룹 최대 개수
+function displayRows(idx){
   console.log(idx);
-  let start = idx*rowsPerPage;
-  let end = start+rowsPerPage;
+  let start = idx*rowsPerPages;
+  let end = start+rowsPerPages;
 
-  let rowsArray = [...rows];
+  let rowsArray = [...rowss];
 
   for(ra of rowsArray){
     ra.style.display = 'none';
@@ -123,110 +123,40 @@ function displayRow(idx){
   }
 
 }
-displayRow(0);
+displayRows(0);
 
-nextPageBtn.addEventListener('click', ()=>{
-  let nextPageNum = pageActiveIdx;
-  if(pageActiveIdx >= pageCount){
-    pageActiveIdx = pageActiveIdx;
+nextPageBtns.addEventListener('click', ()=>{
+  let nextPageNum = pageActiveIdxs;
+  if(pageActiveIdxs >= pageCounts){
+    pageActiveIdxs = pageActiveIdxs;
   }
   else{
-    ++pageActiveIdx;
+    ++pageActiveIdxs;
   }
-  nextPageNum = pageActiveIdx >= pageCount ? pageCount : pageActiveIdx;
-  displayRow(nextPageNum-1);
+  nextPageNum = pageActiveIdxs >= pageCounts ? pageCounts : pageActiveIdxs;
+  displayRows(nextPageNum-1);
   currentPage.innerHTML=`${nextPageNum}`;
-  allPage.innerHTML=`${pageCount}`;
-  // if(pageActiveIdx == 0) {
-  //   prevPageBtn.style.display = 'none'
-  // } else {
-  //   prevPageBtn.style.display = 'flex'
-  // }
-  // if(pageActiveIdx == totalPageCount -1) {
-  //   nextPageBtn.style.display = 'none'
-  // } else {
-  //   nextPageBtn.style.display = 'flex'
-  // }
+  allPage.innerHTML=`${pageCounts}`;
+
 });
-prevPageBtn.addEventListener('click', ()=>{
-  let nextPageNum = pageActiveIdx;
-  --pageActiveIdx;
-  nextPageNum = pageActiveIdx < 1 ? 1 : pageActiveIdx;
-  displayRow(nextPageNum);
+prevPageBtns.addEventListener('click', ()=>{
+  let nextPageNum = pageActiveIdxs;
+  --pageActiveIdxs;
+  nextPageNum = pageActiveIdxs < 1 ? 1 : pageActiveIdxs;
+  displayRows(nextPageNum);
   currentPage.innerHTML=`${nextPageNum}`;
-  allPage.innerHTML=`${pageCount}`;
-  // if(pageActiveIdx == 0) {
-  //   prevPageBtn.style.display = 'none'
-  // } else {
-  //   prevPageBtn.style.display = 'flex'
-  // }
-  // if(pageActiveIdx == totalPageCount -1) {
-  //   nextPageBtn.style.display = 'none'
-  // } else {
-  //   nextPageBtn.style.display = 'flex'
-  // }
+  allPage.innerHTML=`${pageCounts}`;
+
 
 });
 const currentPage = document.querySelector('.currentPage');
 const allPage = document.querySelector('.allPage');
-currentPage.innerHTML=`${pageActiveIdx+1}`;
-allPage.innerHTML=`${pageCount}`;
+currentPage.innerHTML=`${pageActiveIdxs+1}`;
+allPage.innerHTML=`${pageCounts}`;
 function pagenum(nextPageNum){
   console.log(nextPageNum);
 
 }
-// inners.forEach((inner) => {
-//   inner.style.width = `${outer.clientWidth}px`; // inner의 width를 모두 outer의 width로 만들기
-// })
-
-// imgs.forEach((img) => {
-//     img.style.width = `${outer.clientWidth}px`;
-//     img.style.height = `${outer.clientHeight}px`;
-// })
-// innerList.style.width = `${outer.clientWidth * inners.length}px`; // innerList의 width를 inner의 width * inner의 개수로 만들기
-
-/*
-  버튼에 이벤트 등록하기
-*/
-// const buttonLeft = document.querySelector('.button-left');
-// const buttonRight = document.querySelector('.button-right');
-
-// buttonLeft.addEventListener('click', () => {
-//   currentIndex--;
-//   currentIndex = currentIndex < 0 ? 0 : currentIndex; // index값이 0보다 작아질 경우 0으로 변경
-//   Indexvalue();
-//   innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
-//   clearInterval(interval); // 기존 동작되던 interval 제거
-//   interval = getInterval(); // 새로운 interval 등록
-// });
-
-// buttonRight.addEventListener('click', () => {  
-//   currentIndex++;
-//   currentIndex = currentIndex >= inners.length ? inners.length - 1 : currentIndex; // index값이 inner의 총 개수보다 많아질 경우 마지막 인덱스값으로 변경
-//   Indexvalue();
-//   innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
-//   clearInterval(interval); // 기존 동작되던 interval 제거
-//   interval = getInterval(); // 새로운 interval 등록
-// });
-// function Indexvalue(){
-//     index_now.innerHTML = `${currentIndex}`;
-//     index_all.innerHTML = `${inners.length}`;
-//   }
-// /*
-//   주기적으로 화면 넘기기
-// */
-// const getInterval = () => {
-//   return setInterval(() => {
-//     currentIndex++;
-//     Indexvalue();
-//     currentIndex = currentIndex >= inners.length ? 0 : currentIndex;
-//     innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`;
-//   }, 2000);
-// }
-
-// let interval = getInterval(); // interval 등록
-
-
 
 // ============================================================================
 const outers = document.querySelector('.nav_realmenu_box');
@@ -256,157 +186,3 @@ const header_top_menu = document.querySelector(".header_top_menu");
 const logoutBtn = document.querySelector(".logoutBtn");
 let loginstatus = "loginUser";
 userLoginoutStatus();
-
-// function userLoginoutStatus(){
-// if(loginstatus === "loginUser"){
-//   login();
-// }
-// else{
-//   console.log('1');
-//   notlogin();
-// }
-// }
-// // ============================================================================
-
-// // logoutBtn.addEventListener('click', () => {
-// //   loginout();
-// // })
-
-// // if(loginstatus == "loginUser"){
-// //   loginout();
-// // }
-// function login() {
-
-//   let loginbox = document.createElement("div");
-//   loginbox.setAttribute("class", "loginbox");
-//   loginbox.style =`
-//   display: flex;
-//   align-items: center;
-//   `
-//   header_top_menu.appendChild(loginbox);
-
-//   let login_mypage = document.createElement("p");
-//   login_mypage.setAttribute("class", "login_mypage");
-//   login_mypage.innerText=`마이페이지`;
-//   login_mypage.style =
-//   `margin: 0px 11px 0px 0px;
-//   font-size:20px;`;
-  
-//   let login_username = document.createElement("p");
-//   login_username.setAttribute("class", "login_username");
-//   login_username.innerHTML=`<strong>김지영</strong>님`;
-//   login_username.style =
-//   `margin: 0px 11px 0px 0px;
-//   font-size:20px;
-//   `
-
-//   let login_br1 = document.createElement("div");
-//   login_br1.setAttribute("class", "login_br");
-//   login_br1.style =
-//   `background-color: black;
-//   width: 1px;
-//   height: 30px;
-//   margin: 0px 11px 0px 0px;`
-
-//   let login_br2 = document.createElement("div");
-//   login_br2.setAttribute("class", "login_br");
-//   login_br2.style =
-//   `background-color: black;
-//   width: 1px;
-//   height: 30px;
-//   margin: 0px 11px 0px 0px;`
-//   let login_logoutBtn = document.createElement("button");
-//   login_logoutBtn.setAttribute("class", "logoutBtn");
-//   login_logoutBtn.innerHTML=`<p class="loginOutText">로그아웃</p>`;
-//   login_logoutBtn.style = 
-//   `width: 111px;
-//   height: 41px;
-//   background: #3D8361;
-//   border-radius: 15px;
-//   font-family: 'Inter';
-//   font-style: normal;
-//   font-weight: 700;
-//   font-size: 16px;
-//   line-height: 10px;
-//   color: white;`
-
-//   loginbox.appendChild(login_mypage);
-//   loginbox.appendChild(login_br1);
-//   loginbox.appendChild(login_username);
-//   loginbox.appendChild(login_br2);
-//   loginbox.appendChild(login_logoutBtn);
-//   // loginbox.style=
-//   // `display: flex;
-//   // align-items: center;`;
-
-//   login_logoutBtn.addEventListener('click', () => {
-//     loginstatus = "notlogin";
-//     userLoginoutStatus();
-//     // loginbox.style="display:none";
-//     while(loginbox.hasChildNodes())  {
-//       loginbox.removeChild(loginbox.firstChild);
-//     }
-//     header_top_menu.removeChild(header_top_menu.firstChild);
-//   })
-// }
-
-
-
-// function notlogin() {
-// let loginbtn = document.createElement("button");
-// loginbtn.setAttribute("class", "logoutBtn");
-// loginbtn.innerHTML = '<p class="loginOutText">로그인</p>';
-
-
-// let regibtn = document.createElement("button");
-// regibtn.setAttribute("class","regiBtn");
-// regibtn.innerHTML = '<p class="loginOutText">회원가입</p>';
-
-
-// let loginbox = document.createElement("div");
-//   loginbox.setAttribute("class", "loginbox");
-//   loginbox.style =`
-//   display: flex;
-//   align-items: center;
-//   `
-//   header_top_menu.appendChild(loginbox);
-
-
-//   loginbtn.style = `width: 111px;  height: 41px; background: #3D8361;
-//   border-radius: 15px;
-//   font-family: 'Inter';
-//   font-style: normal;
-//   font-weight: 700;
-//   font-size: 16px;
-//   line-height: 10px;
-//   color: white;
-//   margin : 0px 10px 0px 0px;
-//   `
-//   regibtn.style = `width: 111px;  height: 41px; background: #3D8361;
-//   border-radius: 15px;
-//   font-family: 'Inter';
-//   font-style: normal;
-//   font-weight: 700;
-//   font-size: 16px;
-//   line-height: 10px;
-//   color: white;
-//   `
-
-  
-//   loginbox.appendChild(loginbtn);
-//   loginbox.appendChild(regibtn);
-//   // loginbox.style=
-//   // `display: flex;
-//   // align-items: center;`;
-
-//   loginbtn.addEventListener('click', () => {
-//   loginstatus = "loginUser";
-//   userLoginoutStatus();
-//   // loginbox.style="display:none";
-//   while(loginbox.hasChildNodes())  {
-//     loginbox.removeChild(loginbox.firstChild);
-//   }
-//   header_top_menu.removeChild(header_top_menu.firstChild);
-  
-// })
-// }
